@@ -60,8 +60,20 @@
   <p>Email: skylotechboy@gmail.com | Phone: 442-359-7553</p>
 </footer>
 
+<script>
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if(window.scrollY > 150){
+      header.classList.add('fade');
+    } else {
+      header.classList.remove('fade');
+    }
+  });
+</script>
+
 </body>
 </html>
+
 
 
 
