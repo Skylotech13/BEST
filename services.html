@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Webder | Services</title>
+<link rel="stylesheet" href="styles.css" />
+<meta name="description" content="Explore Webder’s professional website design services crafted to elevate your business." />
+<style>
+  *, *::before, *::after {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  body {
+    background: #e0e7ff;
+    color: #1e3a8a;
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+  a {
+    color: #93c5fd; /* lighter blue for better readability */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #3b82f6;
+    outline: none;
+  }
+  header {
+    background: #1e3a8a;
+    color: white;
+    padding: 20px 10%;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+    transition: opacity 0.5s ease;
+  }
+  header.fade {
+    opacity: 0;
+    pointer-events: none;
+  }
+  header h1 {
+    font-weight: 800;
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  nav {
+    display: flex;
+    gap: 30px;
+  }
+  nav a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 10px;
+    border-radius: 6px;
+    color: #93c5fd;
+  }
+  nav a:hover, nav a:focus {
+    background: #2563eb;
+    color: white;
+  }
+  main {
+    padding: 120px 10% 60px; /* account for fixed header */
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #1e3a8a;
+  }
+  .tiers {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .tier {
+    background: white;
+    box-shadow: 0 6px 15px rgba(30, 58, 138, 0.15);
+    border-radius: 16px;
+    padding: 30px 25px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: default;
+    overflow: hidden;
+  }
+  .tier:hover, .tier:focus-within {
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 16px 40px rgba(30, 58, 138, 0.4);
+  }
+  .tier h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #1e3a8a;
+  }
+  .tier .price {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #2563eb;
+    margin-bottom: 1.2rem;
+    text-align: right;
+  }
+  .tier ul {
+    list-style: none;
+    padding-left: 0;
+    color: #334155;
+    margin-bottom: 1rem;
+    transition: max-height 0.4s ease;
+    max-height: 100px;
+    overflow: hidden;
+  }
+  .tier:hover ul,
+  .tier:focus-within ul {
+    max-height: 300px; /* expands on hover/focus */
+  }
+  .tier ul li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 22px;
+    font-weight: 600;
+  }
+  .tier ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background: #2563eb;
+    border-radius: 50%;
+  }
+  /* Premium tier */
+  .tier.premium {
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+    color: #3b0a45;
+    box-shadow: 0 10px 40px rgba(251, 194, 235, 0.5);
+  }
+  .tier.premium h3,
+  .tier.premium .price,
+  .tier.premium ul li {
+    color: #3b0a45;
+  }
+  /* Responsive */
+  @media (max-width: 900px) {
+    .tiers {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 1.6rem;
+    }
+    nav a {
+      font-size: 0.9rem;
+      padding: 6px 8px;
+    }
+    .tier {
+      width: 100%;
+      max-width: 350px;
+      margin-bottom: 20px;
+    }
+  }
+</style>
+<script>
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if(window.scrollY > 150){
+      header.classList.add('fade');
+    } else {
+      header.classList.remove('fade');
+    }
+  });
+</script>
+</head>
+<body>
+
+<header>
+  <h1>Webder</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Clear Pricing, Premium Value</h2>
+
+  <div class="tiers" role="list" aria-label="Pricing tiers">
+
+    <section class="tier" tabindex="0" role="listitem" aria-label="Starter Plan">
+      <h3>Starter</h3>
+      <p class="price">$150</p>
+      <ul>
+        <li>One-page creative site</li>
+        <li>Responsive design</li>
+        <li>Basic animations</li>
+      </ul>
+      <p>Perfect for entrepreneurs or small projects needing a clean online presence.</p>
+    </section>
+
+    <section class="tier" tabindex="0" role="listitem" aria-label="Business Suite Plan">
+      <h3>Business Suite</h3>
+      <p class="price">$300</p>
+      <ul>
+        <li>5-8 pages with animations</li>
+        <li>Forms & SEO foundations</li>
+        <li>Mobile-friendly & fast</li>
+      </ul>
+      <p>Ideal for growing businesses wanting an engaging multi-page website.</p>
+    </section>
+
+    <section class="tier premium" tabindex="0" role="listitem" aria-label="Signature Web Presence Plan">
+      <h3>Signature Web Presence</h3>
+      <p class="price">$400</p>
+      <ul>
+        <li>Everything in Business Suite</li>
+        <li>Custom animations & blog setup</li>
+        <li>6 months ongoing support</li>
+      </ul>
+      <p>The ultimate package for brands wanting a full-featured, polished web presence.</p>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 Webder. Precision-crafted websites for the modern era.</p>
+  <p>Email: skylotechboy@gmail.com | Phone: 442-359-7553</p>
+</footer>
+
+</body>
+</html>
