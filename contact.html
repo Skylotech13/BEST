@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Webder | Contact</title>
+<link rel="stylesheet" href="styles.css" />
+<meta name="description" content="Get in touch with Webder for professional website design services and support." />
+<style>
+  *, *::before, *::after {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  body {
+    background: #e0e7ff;
+    color: #1e3a8a;
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+  a {
+    color: #93c5fd; /* lighter blue for better contrast */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #3b82f6;
+    outline: none;
+  }
+  header {
+    background: #1e3a8a;
+    color: white;
+    padding: 20px 10%;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+    transition: opacity 0.5s ease;
+  }
+  header.fade {
+    opacity: 0;
+    pointer-events: none;
+  }
+  header h1 {
+    font-weight: 800;
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  nav {
+    display: flex;
+    gap: 30px;
+  }
+  nav a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 10px;
+    border-radius: 6px;
+  }
+  nav a:hover, nav a:focus {
+    background: #2563eb;
+    color: white;
+  }
+  main {
+    padding: 120px 10% 60px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  form {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(30, 58, 138, 0.15);
+  }
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1e3a8a;
+  }
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 2px solid #c7d2fe;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #1e3a8a;
+    transition: border-color 0.3s ease;
+    resize: vertical;
+  }
+  input:focus,
+  textarea:focus {
+    border-color: #2563eb;
+    outline: none;
+  }
+  button {
+    background: #2563eb;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+  }
+  button:hover,
+  button:focus {
+    background: #3b82f6;
+    outline: none;
+  }
+  .contact-info {
+    margin-top: 40px;
+    font-size: 1.1rem;
+    color: #334155;
+    text-align: center;
+  }
+  .contact-info p {
+    margin-bottom: 12px;
+  }
+  .response-time {
+    margin-top: 20px;
+    font-size: 1rem;
+    font-style: italic;
+    color: #475569;
+    text-align: center;
+  }
+  footer {
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 30px 10%;
+    font-size: 1rem;
+    margin-top: 80px;
+  }
+  @media (max-width: 900px) {
+    main {
+      padding: 120px 5% 60px;
+    }
+  }
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 1.6rem;
+    }
+    nav a {
+      font-size: 0.9rem;
+      padding: 6px 8px;
+    }
+  }
+</style>
+<script>
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if(window.scrollY > 150){
+      header.classList.add('fade');
+    } else {
+      header.classList.remove('fade');
+    }
+  });
+</script>
+</head>
+<body>
+
+<header>
+  <h1>Webder</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Contact Us</h2>
+
+  <form action="#" method="post" aria-label="Contact form">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <p class="response-time">Please allow up to 48 hours for a response.</p>
+
+  <div class="contact-info" aria-label="Contact information">
+    <p>Email: <a href="mailto:skylotechboy@gmail.com">skylotechboy@gmail.com</a></p>
+    <p>Phone: <a href="tel:+14423597553">442-359-7553</a></p>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 Webder. Precision-crafted websites for the modern era.</p>
+</footer>
+
+</body>
+</html>
