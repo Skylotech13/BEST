@@ -3,143 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Webder | Home</title>
+<title>Webder | Bespoke Websites Crafted for Visionaries</title>
+<meta name="description" content="Webder crafts stunning, high-performing websites tailored to your brand identity.">
 <link rel="stylesheet" href="styles.css" />
-<meta name="description" content="Welcome to Webder, your partner in creating precision-crafted, beautiful websites." />
 <style>
-  /* Keep your original styles here or link external stylesheet */
-  body {
-    background: #e0e7ff;
-    color: #1e3a8a;
-    min-height: 100vh;
-    line-height: 1.5;
-  }
-  header {
-    background: #1e3a8a;
-    color: white;
-    padding: 20px 10%;
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 999;
-    transition: opacity 0.5s ease;
-  }
-  header h1 {
-    font-weight: 800;
-    font-size: 2rem;
-    letter-spacing: 1px;
-  }
-  nav {
-    display: flex;
-    gap: 30px;
-  }
-  nav a {
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 8px 10px;
-    border-radius: 6px;
-    color: #93c5fd; /* Improved blue for readability */
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  nav a:hover,
-  nav a:focus {
-    background: #2563eb;
-    color: white;
-  }
-  main {
-    padding: 120px 10% 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .about-webder {
-    background: #f0f4ff;
-    padding: 50px 10%;
-    border-radius: 16px;
-    max-width: 900px;
-    margin: 40px auto 80px;
-    box-shadow: 0 6px 15px rgba(30,58,138,0.1);
-    text-align: center;
-  }
-  .about-webder h2 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #1e3a8a;
-    margin-bottom: 20px;
-  }
-  .about-webder p {
-    font-size: 1.2rem;
-    color: #334155;
-    line-height: 1.6;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-  .services-container {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-    max-width: 900px;
-    margin: 0 auto 60px;
-    flex-wrap: wrap;
-  }
-  .service-card {
-    background: white;
-    flex: 1 1 280px;
-    border-radius: 16px;
-    padding: 30px 25px;
-    box-shadow: 0 6px 15px rgba(30, 58, 138, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: default;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .service-card:hover,
-  .service-card:focus-within {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(30, 58, 138, 0.3);
-  }
-  .service-card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #1e3a8a;
-  }
-  .service-card p {
-    font-size: 1.15rem;
-    color: #475569;
-  }
-  @media (max-width: 900px) {
-    main {
-      padding: 120px 5% 60px;
-    }
-    .services-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-  @media (max-width: 480px) {
-    header h1 {
-      font-size: 1.6rem;
-    }
-    nav a {
-      font-size: 0.9rem;
-      padding: 6px 8px;
-    }
-  }
+  /* Minimal inline styling for fallback */
+  body { background: #e0e7ff; color: #1e3a8a; font-family: Poppins, sans-serif; }
 </style>
-<script>
-  window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    if(window.scrollY > 150){
-      header.classList.add('fade');
-    } else {
-      header.classList.remove('fade');
-    }
-  });
-</script>
 </head>
 <body>
 
@@ -154,35 +24,39 @@
 </header>
 
 <main>
-
-  <section class="about-webder" aria-label="About Webder">
-    <h2>About Webder</h2>
-    <p>
-      At Webder, we blend beauty, usability, and speed to craft websites that inspire and engage. Each project reflects attention to detail, clean design, and performance — your online presence elevated to new heights.
-    </p>
-  </section>
-
-  <section aria-label="Our Services">
-    <h2>Our Services</h2>
-    <p style="max-width: 700px; margin: 0 auto 40px; font-size:1.15rem; color: #334155; text-align:center;">
-      From custom-designed websites to full corporate solutions, we build digital experiences tailored to your brand and goals.
-    </p>
-    <div class="services-container">
-      <article class="service-card" tabindex="0">
-        <h3>Custom Design</h3>
-        <p>Fresh, unique layouts crafted to match your business identity — no templates.</p>
-      </article>
-      <article class="service-card" tabindex="0">
-        <h3>Landing & Sales Pages</h3>
-        <p>Optimized for conversions with clear calls-to-action and smooth user experience.</p>
-      </article>
-      <article class="service-card" tabindex="0">
-        <h3>Business Presence</h3>
-        <p>Comprehensive sites with scalable architecture and interactive elements.</p>
-      </article>
+  <section class="hero" aria-label="Hero Section">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h2>Your Vision, Crafted Digitally</h2>
+        <p>At Webder, we build more than just websites—we craft digital experiences that connect, engage, and convert.</p>
+        <a href="services.html" class="cta-button">Explore Our Services</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Creative web design concept with laptop and sketches">
+      </div>
     </div>
   </section>
 
+  <section class="about" aria-label="About Webder">
+    <h2>Why Choose Webder?</h2>
+    <div class="about-cards">
+      <article class="about-card">
+        <img src="https://images.unsplash.com/photo-1581090700227-1fe7f5b06209?auto=format&fit=crop&w=600&q=80" alt="Modern design illustration">
+        <h3>Modern Design</h3>
+        <p>Experience eye-catching layouts tailored for engagement and brand identity.</p>
+      </article>
+      <article class="about-card">
+        <img src="https://images.unsplash.com/photo-1521790366328-5b8a9c720f15?auto=format&fit=crop&w=600&q=80" alt="Performance speedometer concept">
+        <h3>Lightning Fast</h3>
+        <p>Optimized for speed to ensure your audience stays engaged without delays.</p>
+      </article>
+      <article class="about-card">
+        <img src="https://images.unsplash.com/photo-1581090700227-1fe7f5b06209?auto=format&fit=crop&w=600&q=80" alt="Support concept image">
+        <h3>Reliable Support</h3>
+        <p>Our team offers dedicated support and timely updates to keep your site thriving.</p>
+      </article>
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -192,3 +66,4 @@
 
 </body>
 </html>
+
