@@ -5,28 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Webder | Bespoke Websites Crafted for Visionaries</title>
 <meta name="description" content="Webder crafts stunning, high-performing websites tailored to your brand identity.">
+<link rel="stylesheet" href="styles.css" />
 <style>
-  body { background: #e0e7ff; color: #1e3a8a; font-family: Poppins, sans-serif; margin:0; }
-  header {
-    background: #1e3a8a;
-    color: white;
-    padding: 20px 10%;
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 999;
-    transition: opacity 0.5s ease;
-  }
-  header.fade {
-    opacity: 0;
-    pointer-events: none;
-  }
-  main {
-    margin-top: 100px;
-    padding: 20px 10%;
-  }
+  body { background: #e0e7ff; color: #1e3a8a; font-family: Poppins, sans-serif; }
 </style>
 </head>
 <body>
@@ -34,33 +15,64 @@
 <header>
   <h1>Webder</h1>
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Services</a>
-    <a href="#">Portfolio</a>
-    <a href="#">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
 
 <main>
-  <p>Scroll down to test header fade.</p>
-  <div style="height:2000px;"></div>
+  <section class="hero" aria-label="Hero Section">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h2>Your Vision, Crafted Digitally</h2>
+        <p>At Webder, we build more than just websites—we craft digital experiences that connect, engage, and convert.</p>
+        <a href="services.html" class="cta-button">Explore Our Services</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Creative web design concept with laptop and sketches" />
+      </div>
+    </div>
+  </section>
+
+  <section class="about" aria-label="About Webder">
+    <h2>Why Choose Webder?</h2>
+    <div class="about-cards">
+      <article class="about-card">
+        <h3>Modern Design</h3>
+        <p>Experience eye-catching layouts tailored for engagement and brand identity.</p>
+      </article>
+      <article class="about-card">
+        <h3>Lightning Fast</h3>
+        <p>Optimized for speed to ensure your audience stays engaged without delays.</p>
+      </article>
+      <article class="about-card">
+        <h3>Reliable Support</h3>
+        <p>Our team offers dedicated support and timely updates to keep your site thriving.</p>
+      </article>
+    </div>
+  </section>
 </main>
 
-<script>
-  function checkHeaderFade() {
-    const header = document.querySelector('header');
-    if(!header) return;
-    if(window.scrollY > 150){
-      header.classList.add('fade');
-    } else {
-      header.classList.remove('fade');
-    }
-  }
+<footer>
+  <p>&copy; 2025 Webder. Precision-crafted websites for the modern era.</p>
+  <p>Email: skylotechboy@gmail.com | Phone: 442-359-7553</p>
+</footer>
 
-  window.addEventListener('load', checkHeaderFade);
-  window.addEventListener('scroll', checkHeaderFade);
+<script>
+  // Make sure the script runs after the DOM is ready
+  document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 150){
+        header.classList.add('fade');
+      } else {
+        header.classList.remove('fade');
+      }
+    });
+  });
 </script>
 
 </body>
 </html>
-
